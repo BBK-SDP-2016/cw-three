@@ -7,6 +7,7 @@ Course Program: MSc IT
 Coursework Submission: Assignment Three - Ray Tracer (cw3) 
 
 Notes:
-Retaking SDP module from 2015.
+Retaking SDP module from 2015. Coursework assignment therefore completed individually. 
 
-1. Initial commit of base files from Keith's central repository
+1. Initial commit of base files from Keith's central repository.
+2. Implement coordinator object to make it an actor and set a message. 
