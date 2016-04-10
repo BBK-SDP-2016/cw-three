@@ -12,3 +12,4 @@ Retaking SDP module from 2015. Coursework assignment therefore completed individ
 1. Initial commit of base files from Keith's central repository.
 2. Implement coordinator object to make it an actor and set a message.
 3. Implement trace object to start the coordinator actor.
+4. Implement parallelism in Scene object.
