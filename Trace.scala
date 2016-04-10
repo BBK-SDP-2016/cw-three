@@ -1,3 +1,9 @@
+import akka.actor._
+import scala.concurrent.duration.Duration
+import scala.concurrent.duration._
+
+
+
 object Trace {
 
   val AntiAliasingFactor = 4
@@ -31,15 +37,19 @@ object Trace {
 
     // Init the coordinator -- must be done before starting it.
     Coordinator.init(image, outfile)
+    
+    val system = ActorSystem("RayTracer")
+    val coordinator = system.actorOf(Props(Coordinator), name="coordinator")
+    
 
     // TODO: Start the Coordinator actor.
 
-    scene.traceImage(width, height)
+    scene.traceImage(width, height, system, coordinator)
 
     // TODO:
     // This one is tricky--we can't simply send a message here to print
     // the image, since the actors started by traceImage haven't necessarily
     // finished yet.  Maybe print should be called elsewhere?
-    Coordinator.print
+    //Coordinator.print
   }
 }
